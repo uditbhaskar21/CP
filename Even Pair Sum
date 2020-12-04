@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class codchf2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        while (T-->0){
+            int count =0;
+            long A = sc.nextInt();
+            long B = sc.nextInt();
+            long evenA = A/2;
+            long evenB = B/2;
+            long oddA = A-evenA;
+            long oddB = B-evenB;
+            long ans = (evenA*evenB)+(oddA*oddB);
+            System.out.println(ans);
+
+        }
+    }
+}
