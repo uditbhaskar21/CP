@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class codechef1A {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int D1 = sc.nextInt();
+        int V1 = sc.nextInt();
+        int D2 = sc.nextInt();
+        int V2 = sc.nextInt();
+        int P = sc.nextInt();
+        int temp =0;
+        int days = 0;
+        if (D1==D2 && D1==1){
+            while (temp<P){
+                days++;
+                temp+=(V1+V2);
+            }
+            System.out.println(days);
+        }else {
+           days = Math.min(D1,D2)-1;
+           while (temp<P){
+               if (D1<D2){
+                  temp+=V1;
+                  D1++;
+               }else if(D1>D2){
+                   temp+=V2;
+                   D2++;
+               }else if (D1==D2){
+                   temp+=(V1+V2);
+               }
+               days++;
+           }
+           System.out.println(days);
+        }
+    }
+}
